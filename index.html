@@ -80,7 +80,7 @@
                                     x-model="paid" /></label>
                         </template>
                         <template x-if="paid == total && checkout">
-                            <!-- <br> -->
+                            
                             <span>
                                 <div style="color: rgb(15, 15, 15)">Enjoy your pizzas!</div>
                                 <button class="Mdesign AW Bdesign" @click="small=0; medium=0; large=0; checkout=false;">
@@ -89,12 +89,12 @@
                             </span>
                         </template>
                         <template x-if="(parseInt(paid) < total && paid != total && checkout)">
-                            <!-- <br> -->
+                            
                             <span>
-                                <div style="border: 1px solid rgb(204, 3, 3); color: #e70909;">
-                                    <h2><b>This is not enough money</b></h2>
-
-                                </div>
+                                <div v-if="showNotEnoughMoneyMessage">
+                                    <div style="border: 1px solid rgb(238, 181, 219); color: #e70983;">
+                                      <!--<h2><b>This is not enough money</b></h2>-->
+                                      
                                 <button class="Shopping_cart" @click="small=0; medium=0; large=0; checkout=false;">
                                     <div style="color: #f10a0a;">
 
@@ -130,70 +130,61 @@
 
         
 
-  <div class="all_pizzas">
-    <div class="small_pizza">
-        <img src="pizza-slice.jpg" alt="Small Pizza" width="200 px">
-      <h2>Small Pizza</h2>
-      <h3>R30.00</h3>
-      <p>Classic Margherita: Experience the timeless combination of fresh tomatoes, creamy mozzarella, fragrant basil, and a drizzle of olive oil atop a perfectly baked crust. Simple, yet utterly satisfying.</p>
-      <div x-data="{Buy}">
+        <div class="all_pizzas">
+            <div class="small_pizza">
+                <img src="full-pizza.jpg" alt="Small Pizza" width="250 px">
+                <h2>Small Pizza</h2>
+                <h3>R30.00</h3>
+                <p>Classic Margherita: Experience the timeless combination of fresh tomatoes, creamy mozzarella, fragrant basil, and a drizzle of olive oil atop a perfectly baked crust. Simple, yet utterly satisfying.</p>
+                <div x-data="{ Buy }">
                     <div class="Buy" x-text="Buy"></div>
                     <div>
                         <button class="Mdesign W Bdesin" @click="small++">ORDER</button>
                         <span x-text="count"></span>
                     </div>
-
-                </div>                                
-                                      
-                                      
-    </div>
-
-                
-
-
-           <div class="medium_pizza">
-        <img src="full-pizza.jpg" alt="Medium Pizza" width="250 px">
-      <h2>Medium Pizza</h2>
-      <h3>R65.99</h3>
-      <p>Veggie Supreme: For the veggie lovers out there, delight in a medley of colorful vegetables such as bell peppers, onions, mushrooms, and olives, all harmoniously layered on our signature pizza dough.</p>
-                 <div x-data="{Buy}">
+                </div>
+            </div>
+        
+            <div class="medium_pizza">
+                <img src="full-pizza.jpg" alt="Medium Pizza" width="250 px">
+                <h2>Medium Pizza</h2>
+                <h3>R65.99</h3>
+                <p>Veggie Supreme: For the veggie lovers out there, delight in a medley of colorful vegetables such as bell peppers, onions, mushrooms, and olives, all harmoniously layered on our signature pizza dough.</p>
+                <div x-data="{ Buy }">
                     <div class="Buy" x-text="Buy"></div>
                     <div>
                         <button class="Mdesign W Bdesign" @click="medium++">ORDER</button>
                         <span x-text="count"></span>
                     </div>
-
-                </div>                               
-                                      
-    </div>
-
-      
-
-                
-
-               <div class="large_pizza">
-        <img src="full-pizza.jpg" alt="Large Pizza" width="250 px">
-      <h2>Large Pizza</h2>
-      <h3>R129.99</h3>
-      <p>BBQ Chicken Bliss: Embark on a flavor journey with tender pieces of grilled chicken, sweet and smoky barbecue sauce, red onions, and fresh cilantro. Each bite is a perfect blend of tangy, savory, and slightly sweet notes.</p>
-       <div x-data="{Buy}">
+                </div>
+            </div>
+        
+            <div class="large_pizza">
+                <img src="full-pizza.jpg" alt="Large Pizza" width="250 px">
+                <h2>Large Pizza</h2>
+                <h3>R129.99</h3>
+                <p>BBQ Chicken Bliss: Embark on a flavor journey with tender pieces of grilled chicken, sweet and smoky barbecue sauce, red onions, and fresh cilantro. Each bite is a perfect blend of tangy, savory, and slightly sweet notes.</p>
+                <div x-data="{ Buy }">
                     <div class="Buy" x-text="Buy"></div>
                     <div>
                         <button class="Mdesign W Bdesign" @click="large++">ORDER</button>
                         <span x-text="count"></span>
                     </div>
-
                 </div>
-                                
-                                      
-    </div>
-
-               
-
-
-<div class="contact_us">
-    <h2>Contact Details</h2>
-    <p>Contact us at: (011) 934 5432 | info@PERFECTpizza.co.za</p>
-  </div>
-</body>
-</html>
+            </div>
+        </div>
+        
+        <div class="contact_us">
+            <div class="contact">
+                <h2>Contact details</h2>
+                Contact us at: (011) 934 5432
+                <div>X</div>
+                <div>/fb</div>
+                <div>/insta</div>
+                <div>@PerfectPizza</div>
+            </div>
+        </div>
+        
+        
+        </body>
+        </html>

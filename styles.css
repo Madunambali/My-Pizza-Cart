@@ -1,8 +1,7 @@
 body {
-    background-color: rgb(241, 169, 232);
+    background-image: url(pizza-walpaper.jpeg);
   }
   
-
   .pizzas {
     display: flex;
   }
@@ -54,13 +53,30 @@ body {
     border: 1px solid #1d3557;
     flex: 2;
   }
+  
   .contact_us {
     background-color: rgb(141, 34, 241);
     margin: 0.3cm;
     padding: 1cm;
     border-radius: 1cm;
     border: 1px solid #1d3557;
+    display: flex;
   }
+  
+  button.Mdesign {
+    background-color: #ff1a8c; 
+    color: white; 
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 0.3em;
+    cursor: pointer;
+  }
+  
+  button.Mdesign:hover {
+    background-color: #ff1a8c; /* Lighter pink on hover */
+  }
+
+
   
   @media (min-width: 650px) {
     body {
